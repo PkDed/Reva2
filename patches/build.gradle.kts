@@ -1,4 +1,4 @@
-group = "apprevanced"
+group = "app.revanced"
 
 patches {
     about {
