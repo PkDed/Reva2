@@ -558,10 +558,6 @@ public final class app/revanced/patches/shared/misc/fix/verticalscroll/VerticalS
 	public static final fun getVerticalScrollPatch ()Lapp/revanced/patcher/patch/BytecodePatch;
 }
 
-public final class app/revanced/patches/shared/misc/gms/FingerprintsKt {
-	public static final field GET_GMS_CORE_VENDOR_GROUP_ID_METHOD_NAME Ljava/lang/String;
-}
-
 public final class app/revanced/patches/shared/misc/gms/GmsCoreSupportPatchKt {
 	public static final fun gmsCoreSupportPatch (Ljava/lang/String;Ljava/lang/String;Lapp/revanced/patcher/Fingerprint;Ljava/util/Set;Lapp/revanced/patcher/Fingerprint;Lapp/revanced/patcher/patch/Patch;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;)Lapp/revanced/patcher/patch/BytecodePatch;
 	public static synthetic fun gmsCoreSupportPatch$default (Ljava/lang/String;Ljava/lang/String;Lapp/revanced/patcher/Fingerprint;Ljava/util/Set;Lapp/revanced/patcher/Fingerprint;Lapp/revanced/patcher/patch/Patch;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)Lapp/revanced/patcher/patch/BytecodePatch;
@@ -594,6 +590,12 @@ public final class app/revanced/patches/shared/misc/mapping/ResourceElement {
 	public final fun getType ()Ljava/lang/String;
 	public fun hashCode ()I
 	public fun toString ()Ljava/lang/String;
+}
+
+public final class app/revanced/patches/shared/misc/mapping/ResourceMappingFilter : app/revanced/patcher/InstructionFilter {
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;I)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public fun matches (Lapp/revanced/patcher/patch/BytecodePatchContext;Lcom/android/tools/smali/dexlib2/iface/Method;Lcom/android/tools/smali/dexlib2/iface/instruction/Instruction;I)Z
 }
 
 public final class app/revanced/patches/shared/misc/mapping/ResourceMappingPatchKt {
@@ -1117,12 +1119,10 @@ public final class app/revanced/patches/youtube/layout/hide/general/HideLayoutCo
 	public static final fun getAlbumCardId ()J
 	public static final fun getBarContainerHeightId ()J
 	public static final fun getCrowdfundingBoxId ()J
-	public static final fun getExpandButtonDownId ()J
 	public static final fun getFabButtonId ()J
 	public static final fun getFilterBarHeightId ()J
 	public static final fun getHideLayoutComponentsPatch ()Lapp/revanced/patcher/patch/BytecodePatch;
 	public static final fun getRelatedChipCloudMarginId ()J
-	public static final fun getYouTubeLogo ()J
 }
 
 public final class app/revanced/patches/youtube/layout/hide/infocards/HideInfoCardsPatchKt {
@@ -1154,17 +1154,7 @@ public final class app/revanced/patches/youtube/layout/hide/time/HideTimestampPa
 }
 
 public final class app/revanced/patches/youtube/layout/miniplayer/MiniplayerPatchKt {
-	public static final fun getFloatyBarButtonTopMargin ()J
-	public static final fun getMiniplayerMaxSize ()J
 	public static final fun getMiniplayerPatch ()Lapp/revanced/patcher/patch/BytecodePatch;
-	public static final fun getModernMiniplayerClose ()J
-	public static final fun getModernMiniplayerExpand ()J
-	public static final fun getModernMiniplayerForwardButton ()J
-	public static final fun getModernMiniplayerRewindButton ()J
-	public static final fun getPlayerOverlays ()J
-	public static final fun getScrimOverlay ()J
-	public static final fun getYtOutlinePictureInPictureWhite24 ()J
-	public static final fun getYtOutlineXWhite24 ()J
 }
 
 public final class app/revanced/patches/youtube/layout/panels/popup/PlayerPopupPanelsPatchKt {
